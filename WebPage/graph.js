@@ -8,7 +8,7 @@ var chDonutData1 =
       {
         backgroundColor: colors.slice(1,4),
         borderWidth: 0,
-        data: [201, 5, 1]
+        data: [200, 6, 1]
       }
     ]
 };
@@ -35,7 +35,7 @@ var chartData = {
     data: [5058, 7437, 7248, 8280, 27189, 6391, 8971],
 	backgroundColor: 'transparent',
 	borderColor : colors[0],
-	borderWidth: 4,
+	borderWidth: 2,
 	pointBackgroundColor: colors[0]
 }
 
@@ -56,7 +56,7 @@ if (chLine) {
       }]
     },
 	title: "Active Users",
-    legend: {
+    legend: { position:'bottom', padding:5,
       display: true
     }
   }

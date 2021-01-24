@@ -30,10 +30,10 @@
                 <div class="collapse navbar-collapse" id="navbarToggler37"> 
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> 
                         <li class="nav-item active"> 
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> 
+                            <a class="nav-link" href="#HomeStart">Home <span class="sr-only">(current)</span></a> 
                         </li>                         
-                        <li class="nav-item"> 
-                            <a class="nav-link" href="#">Activity</a> 
+                        <li class="nav-item active"> 
+                            <a class="nav-link" href="#ActivityMonitor">Activity</a> 
                         </li>                         
                         <li class="nav-item"> 
                             <a class="nav-link disabled" href="#">Disabled</a> 
@@ -53,7 +53,7 @@
 var dt = new Date();
 document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
 </script>
-
+<a id="HomeStart"> </a>
         <div class="container">
             <div class="row my-3">
                 <div class="col">
@@ -79,7 +79,7 @@ document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
 							<tr>
 								<td>
 									<div style="word-wrap: break-word; width: 500px"> 
-														<p class="text-center" style="text-align:center;">1 High risk user [3265- external address]: has made 1402 connections to the network today. Has made a total of 9400 connections this week. This activity is considered above average for this user.</p>
+											<p class="text-center" style="text-align:center;">1 High risk user external address [ 3265 ] has made 1402 connections to the network today. Has made a total of 9400 connections this week. Today's activity is considered [ High ] for this user.</p>
 									</div>
 								</td>
 							</tr>
@@ -97,16 +97,16 @@ document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
 								<td>
 									<div style="word-wrap: break-word; width: 800px"> 
 										<!--text box for part 2-->
-										<p class="text-center" style="text-align:center;">1 High risk user [3265- external address]: has made 1402 connections to the network today. Has made a total of 9400 connections this week. This activity is considered above average for this user.</p>
+										<p class="text-center" style="text-align:center;">6 Meduim Risk users With 1 Near High activity. External address [ 7018 ] has made [ 924 ] connections today. Activity for this address is deemed [ Common ] behahviour for this user.</p>
 								</div>
 							</td>
 						</tr>
 					</table>
 				</div>
 			</div>
-	</div>
 		</div>
-        
+	</div>
+   <a id="ActivityMonitor"> </a>     
         <div class="container">
             <div class="row my-3">
                 <div class="col">
@@ -123,6 +123,26 @@ document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
                 </div>
             </div>
         </div>
+		       <div class="container">
+            <div class="row my-3">
+				<div class="col-md-12">
+					<div class="card"> 
+					<div class="card-body"> 
+						<table class="center">
+							<tr>
+								<td>
+									<div style="word-wrap: break-word; width: 1000px"> 
+										<!--text box for part 2-->
+										<p class="text-center" style="text-align:center;">This weeks lowpoint of activity was on [ Sunday ] with a total of [ 5058 ] users connected throughout the day. This week's highpoint was on [ Wednesday ] with a total of 27189 users throughout the day. This highpoint is considered [ Common ] activity. Recommendation - Check network hardware for possible upgrades to [ Port/Socket Connections ].</p>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div> 
+			</div>
+		</div>
+	</div>
+</div>
 		<script src= "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 		<script src="graph.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
