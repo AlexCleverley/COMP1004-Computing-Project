@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- Boostrap stylesheet -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Home</title>
+        <meta name="generator" content="Google Web Designer 10.0.1.1204">
+        <style type="text/css" id="gwd-text-style">p { margin: 0px; } h1 { margin: 0px; } h2 { margin: 0px; } h3 { margin: 0px; }</style>
+		<style> table,th,td { border: 1px solid black; } </style>
+		<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+		
+		<script src= "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+		
+    </head>
+    <body class="htmlNoPages">
+		
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Go to Top</button>
+		
+	
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+					</div>
+                </div>
+            </div>             
+        </div>
+        
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+                <a class="navbar-brand" href="#">Security</a> 
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler37" aria-controls="" aria-expanded="false" aria-label="Toggle navigation"> 
+                    <span class="navbar-toggler-icon"></span> 
+                </button>                 
+                <div class="collapse navbar-collapse" id="navbarToggler37"> 
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> 
+                        <li class="nav-item active"> 
+                            <a class="nav-link" href="#HomeStart">Home <span class="sr-only">(current)</span></a> 
+                        </li>                         
+                        <li class="nav-item active"> 
+                            <a class="nav-link" href="#ActivityMonitor">Activity</a> 
+                        </li> 
+                        <li class="nav-item active"> 
+                            <a class="nav-link" href="#DataSheet">Data Sheet</a> 
+                        </li> 
+                    </ul>                                        
+                </div>                 
+            </nav>
+        </header>
+		<div class ="row"> 
+			<div class ="col">
+				<div class="card card-body">
+				
+							<p>Date: <span id="datetime"></span></p>
+
+	<script>
+	var dt = new Date();
+	document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+	</script>
+					
+				</div>
+			</div>
+		</div>
+	
+		<a id="HomeStart"> </a>
+			<div class="container">
+				<div class="row my-3">
+					<div class="col">
+						<h4>Threat Breakdown</h4>
+					</div>
+				</div>
+            
+			<div class="row my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <canvas id="chDonut1"></canvas>                           			
+                        </div>                       
+                    </div>
+		  			<div class="card">
+            			<div class="card-body">
+							<p></p>
+							<button type="button" class="bg-success btn btn-lg btn-block btn-light rounded shadow-lg">98 Low Risk</button> 
+							<p></p>
+                   			 <button type="button" class="bg-warning btn btn-lg btn-block btn-light rounded shadow-lg">2 Medium Risk</button>
+							<p></p>
+
+						
+									<div style="word-wrap: break-word; width: 750px"> 
+											<p class="text-center" style="text-align:center;">Irregular Packet Traffic: Source address [ 10.200.7.6 ] & [ 172.19.1.57 ] Users detected high packet count for [ HTTP ] protocols. </p>
+										<p> 
+										</p>
+										<p class="text-center" style="text-align:center;"> Possible Connection issue: Source address [ 192.168.72.43 ] send multiple forward packets over the network and not recieved packets back.</p>
+									</div>
+						</div>
+           		 </div>   
+           	</div>
+		</div>
+
+   <a id="ActivityMonitor"> </a>     
+        <div class="container">
+            <div class="row my-3">
+                <div class="col">
+                    <h4>User Activity- Hourly</h4>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <canvas id="chLine" height="100"> </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		       <div class="container">
+            <div class="row my-3">
+					<div class="card"> 
+					<div class="card-body"> 
+					
+									<div style="word-wrap: break-word"> 
+										<p class="text-center" style="text-align:center;">Todays User Activity is nominal. There has been an additional [ 312 ] connections logged since the previous hour. Majority of Connections are using [ HTTP ] Based protocols. </p>
+									</div>
+					
+					</div> 
+				</div>
+		</div>
+	</div>
+		<a id="DataSheet"> </a>
+		<div class="container">
+				<div class="row my-3">
+					<div class="col">
+						<h4>Data Sheet Snapshot</h4>
+					</div>
+					<input id="search-input" class="form-control" align="middle" type="text" placeholder="Search Records..">
+				</div>
+			  </div>
+		
+		
+		<table class="center" align="center">
+        	<tr>
+				<th style="text-align:center" data-column="Source.IP" data-order="desc">Source IP </th>
+				<th style="text-align:center" data-column="Destination.IP" data-order="desc">Destination IP</th>
+				<th style="text-align:center" data-column="Timestamp" data-order="desc">Timestamp</th>
+				<th style="text-align:center" data-column="Total.Fwd.Packets" data-order="desc">Total Forward Packets</th>
+				<th style="text-align:center" data-column="Total.Backward.Packets" data-order="desc">Total Backward Packets</th>
+				<th style="text-align:center" data-column="L7Protocol" data-order="desc">L7 Protocol</th>
+				<th style="text-align:center" data-column="ProtocolName" data-order="desc">Protocol Name</th>
+          </tr>
+			<tbody id="myTable">
+			
+			</tbody>
+      </table>	
+	<script type="text/javascript" src="graph.js"></script>
+	<script type="text/javascript" src="convert.js"></script>
+	<script type="text/javascript" src="button.js"></script>
+ </body>       
+</html>

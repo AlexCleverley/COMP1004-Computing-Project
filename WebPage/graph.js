@@ -1,4 +1,3 @@
-
 var colors = ['#007bff','#28a745','#e0b53f','#dc3545','#c3e6cb','#6c757d'];
 
 var chDonutData1 = 
@@ -8,7 +7,7 @@ var chDonutData1 =
       {
         backgroundColor: colors.slice(1,4),
         borderWidth: 0,
-        data: [200, 6, 1]
+        data: [98,2,0]
       }
     ]
 };
@@ -30,9 +29,9 @@ if (chDonut1)
 }
 
 var chartData = {
-  labels: ["S", "S", "M", "T", "W", "T", "F"],
+  labels: ["11", "11:10", "11:20", "11:30", "11:40", "11:50", "12"],
   datasets: [{
-    data: [5058, 7437, 7248, 8280, 27189, 6391, 8971],
+    data: [126, 203, 230, 297, 358,389,438],
 	backgroundColor: 'transparent',
 	borderColor : colors[0],
 	borderWidth: 2,
@@ -57,7 +56,7 @@ if (chLine) {
     },
 	title: "Active Users",
     legend: { position:'bottom', padding:5,
-      display: true
+      display: false
     }
   }
   });
